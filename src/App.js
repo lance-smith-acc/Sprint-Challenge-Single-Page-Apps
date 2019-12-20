@@ -3,7 +3,7 @@ import Header from "./components/Header.js";
 import CharacterList from './components/CharacterList';
 import {Route, Switch} from "react-router-dom";
 import WelcomePage from './components/WelcomePage'
-import CharacterCard from "./components/CharacterCard.js";
+import SearchForm from './components/SearchForm'
 
 
 export default function App() {
@@ -17,7 +17,7 @@ export default function App() {
         <Route path="/characters">
           <CharacterList />
         </Route>
-        <Route path="/characters/" children={<CharacterCard />} />
+        <Route path="/search/" component={SearchForm}/>
       </Switch>
       
     </main>
